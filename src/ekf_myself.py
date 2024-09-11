@@ -327,7 +327,7 @@ class ExtendedKalmanFilter:
                 self.robot_yaw = self.GTheta + self.offsetyaw
                 if self.robot_yaw < -np.pi:
                     self.robot_yaw += 2 * np.pi
-                elif self.robot_yaw < np.pi:
+                elif self.robot_yaw > np.pi:
                     self.robot_yaw -= 2 * np.pi
                 robot_orientation = self.yaw_to_orientation(self.robot_yaw)
                 self.robot_orientationz = robot_orientation[0]#
